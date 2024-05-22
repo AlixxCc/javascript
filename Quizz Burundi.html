@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Quiz</title>
+  <style>
+
+    .bouton {
+      background-color: #EE316B;
+      color: white;
+      padding: 40px 80px;
+      font-size: 50px;
+      border: none;
+      cursor: pointer;
+      border-radius: 50px;
+      position: absolute;
+      top: 50%;
+      left: 30%;
+      transform: translate(-50%, -50%);
+      animation: pulse 2s ease-in-out infinite;
+    }
+  
+    .bouton:hover {
+      background-color: #FDB137;
+    }
+    
+  
+    @keyframes pulse {
+      0% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.1);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+  
+      
+      body {
+        font-family: Arial, sans-serif;
+        background-color:wheat;
+        margin: 0;
+        padding: 0;
+      }
+  
+      .container {
+        max-width: 600px;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+  
+      h1 {
+    text-align: center;
+    color: black;
+    background-color: #FDB137;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  
+      #questionn {
+        margin-bottom: 10px;
+        font-weight: bold;
+      }
+  
+      .optionss button {
+        display: block;
+        width: 100%;
+        margin-bottom: 10px;
+        padding: 10px;
+        font-size: 16px;
+        background-color: #f2f2f2;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+  
+      .optionss button:hover {
+    background-color: #EE316B;
+    color: white;
+    transform: scale(1.05);
+  }
+  
+  
+      .temps {
+        text-align: right;
+        font-size: 16px;
+        color: #777;
+      }
+  
+      .res {
+        display: none;
+        margin-top: 20px;
+        padding: 20px;
+        border-radius: 5px;
+      }
+  
+      .res h3 {
+        margin-top: 0;
+        color: #333;
+      }
+  
+      .res p {
+        margin-bottom: 5px;
+      }
+  
+      .res hr {
+        margin: 10px 0;
+        border: none;
+      }
+  
+  
+      
+  
+  .res {
+    display: none;
+    margin-top: 20px;
+    
+    padding: 20px;
+    border-radius: 5px;
+    animation: fade-in 3s ease-in-out;
+  }
+  
+  
+  .optionss button {
+    transition: transform 0.3s;
+  }
+  
+  .optionss button:hover {
+    transform: scale(1.1);
+  }
+  .con{
+    text-align: center;
+    color: black;
+    padding: 10px;
+    border-radius: 5px; 
+    font-size: 50px;
+    margin-top: 50px;
+  }
+  
+    </style>
+</head>
+<body>
+  <div id="demarrer-button">
+    <div class="con">Testez vos connaissances à propos du Burundi</div>
+    <button id="demarrer-button" class="bouton" onclick="demarrerQuizz()">Démarrer le quizz</button>
+
+  </div>
+
+  <div id="quiz-container" class="container" style="display: none;">
+    <h1>QUIZZ</h1>
+    <h2 id="question" class="questionn"></h2>
+    <div id="options" class="optionss"></div>
+    <div id="timer" style="display: none;">
+      <p>Temps restant : </p><span id="timer-value" class="temps"></span></span>
+    </div>  </div>
+
+  <div id="results" class="res" style="display: none;"></div>
+
+
+  <script src="bouton.js"></script>
+</body>
+
